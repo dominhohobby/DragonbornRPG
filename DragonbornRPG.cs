@@ -16,7 +16,7 @@ public class DragonbornRPGPlugin : BasePlugin, IPluginConfig<AdminControlConfig>
 {
     public override string ModuleName => "Dragonborn RPG Plugin";
     public override string ModuleVersion => "2.0.0";
-    public override string ModuleAuthor => "Annabel, aurorapar/show_inferno.cs";
+    public override string ModuleAuthor => "Annabel, dominhohobby, aurorapar/show_inferno.cs";
     public override string ModuleDescription => "RPG system with XP, levels, and talents for Dragonborn players.";
 
     private MySqlConnection _connection = null!;
@@ -153,4 +153,5 @@ public class DragonbornRPGPlugin : BasePlugin, IPluginConfig<AdminControlConfig>
         var stats = _playerStats[steamId.Value];
         player.PrintToChat($"📊 Level: {stats.Level} | XP: {stats.XP}/{stats.Level * 100}");
     }
+
 }
